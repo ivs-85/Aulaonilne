@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+  }
+  
+  .login {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .login h2 {
+    margin-bottom: 25px;
+    color: #764ba2;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #764ba2;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .input-box label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+  
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: #667eea;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #764ba2;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background: #667eea;
+  }
+  
+  .extra {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .extra a {
+    color: #764ba2;
+    text-decoration: none;
+  }
+  
+  .extra a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ===== Responsividade ===== */
+  @media (max-width: 400px) {
+    .login {
+      padding: 30px 20px;
+    }
+  
+    .login h2 {
+      font-size: 20px;
+    }
+  
+    .login-btn {
+      font-size: 15px;
+      padding: 10px;
+    }
+  
+    .extra {
+      font-size: 13px;
+    }
+  }
